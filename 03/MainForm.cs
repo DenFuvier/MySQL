@@ -24,14 +24,16 @@ namespace _03
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm1_FormClosed(object sender, EventArgs e)
         {
-
+           
+                Application.Exit();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string cs = @"server=localhost;userid=root;password=vertrigo;database=boyk";
+            string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
             try
             {
 
@@ -91,5 +93,7 @@ namespace _03
             Admin admin = new Admin();
             admin.ShowDialog();
         }
+
+
     }
 }

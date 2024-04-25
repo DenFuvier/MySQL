@@ -21,7 +21,7 @@ namespace _03
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string cs = @"server=localhost;userid=root;password=vertrigo;database=boyk";
+            string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
             try
             {
                 using (var con = new MySqlConnection(cs))
@@ -62,6 +62,13 @@ namespace _03
             
         }
 
-       
+        private void Registr_FormClosed(object sender, EventArgs e)
+        {
+
+
+                Application.Exit();
+
+           
+        }
     }
 }

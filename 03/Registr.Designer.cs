@@ -117,7 +117,7 @@
             // 
             // openForm1
             // 
-            this.openForm1.Location = new System.Drawing.Point(6, 415);
+            this.openForm1.Location = new System.Drawing.Point(101, 415);
             this.openForm1.Name = "openForm1";
             this.openForm1.Size = new System.Drawing.Size(73, 23);
             this.openForm1.TabIndex = 19;
@@ -127,7 +127,7 @@
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(229, 415);
+            this.Exit.Location = new System.Drawing.Point(15, 415);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(75, 23);
             this.Exit.TabIndex = 20;
@@ -135,7 +135,7 @@
             this.Exit.UseVisualStyleBackColor = true;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // Form2
+            // Registr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

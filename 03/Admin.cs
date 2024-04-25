@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
@@ -14,6 +15,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _03
 {
@@ -30,6 +32,7 @@ namespace _03
             UserView.SelectionChanged += UserView_SelectionChanged;
 
         }
+
 
         private void UserView_SelectionChanged(object sender, EventArgs e)
         {
@@ -58,7 +61,7 @@ namespace _03
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            string cs = @"server=localhost;userid=root;password=vertrigo;database=boyk";
+            string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
             try
             {
                 var con = new MySqlConnection(cs);
@@ -101,9 +104,10 @@ namespace _03
 
         }
 
+
         private void change_Click(object sender, EventArgs e)
         {
-            string cs = @"server=localhost;userid=root;password=vertrigo;database=boyk";
+            string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
             try
             {
                 var con = new MySqlConnection(cs);
@@ -111,9 +115,11 @@ namespace _03
                 con.Open();
 
 
-                var stm = String.Format("Update login Name, Surname  FROM users WHERE Login = \"{0}\" AND password = \"{1}\"",
-                   Login.Text,
-               Password.Text);
+                var stm = String.Format("UPDATE users SET Login = '{0}', name = '{1}', surname = '{2}', password = '{3}' WHERE Login = '{0}'",
+                Login_Admin.Text,
+                 NameAdmin.Text,
+                  Surname_admin.Text,
+                   Password_Admin.Text);
 
 
 
@@ -121,7 +127,7 @@ namespace _03
 
                 var cmd = new MySqlCommand(stm, con);
                 MySqlDataReader Reader = cmd.ExecuteReader();
-                
+                con.Close();
             }
             catch (Exception Exept)
             {
@@ -129,6 +135,51 @@ namespace _03
                 MessageBox.Show(Exept.Message);
 
             }
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
+            try
+            {
+                var con = new MySqlConnection(cs);
+                con.Open();
+
+
+
+                string stm = String.Format("DELETE FROM users WHERE login = '{0}' " , Login_Admin.Text );
+
+
+                var cmd = new MySqlCommand(stm, con);
+                MySqlDataReader Reader = cmd.ExecuteReader();
+
+                con.Close();
+            }
+            catch (Exception Exept)
+            {
+
+                MessageBox.Show(Exept.Message);
+
+            }
+        }
+
+        private void openMySQl_Click(object sender, EventArgs e)
+        {
+            /*if (Process.GetProcessesByName("Vertrigo.exe").Any())
+            {
+                Process process = new Process();
+                process.StartInfo.FileName = "Vertrigo.exe";
+                process.StartInfo.Verb = "runas";
+                process.Start();
+                Process.Start($"http://127.0.0.1/phpmyadmin/sql.php?db=boyk&table=users&pos=0");
+            }
+            else
+            {
+                MessageBox.Show("Приложение уже запущено");
+                Process.Start($"http://127.0.0.1/phpmyadmin/sql.php?db=boyk&table=users&pos=0");
+            }
+            */
+            Process.Start($"http://127.0.0.1/phpmyadmin/sql.php?db=boyk&table=users&pos=0");
         }
     }
 }

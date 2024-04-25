@@ -40,6 +40,8 @@
             this.Password_Admin = new System.Windows.Forms.TextBox();
             this.Login_Admin = new System.Windows.Forms.TextBox();
             this.change = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
+            this.openMySQl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UserView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +67,7 @@
             // 
             // UserView
             // 
+            this.UserView.BackgroundColor = System.Drawing.SystemColors.Info;
             this.UserView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UserView.Location = new System.Drawing.Point(12, 12);
             this.UserView.Name = "UserView";
@@ -76,47 +79,47 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(4, 282);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 33;
-            this.label4.Text = "Ваша фамилия";
+            this.label4.Text = "Фамилия";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 253);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 32;
-            this.label2.Text = "Ваше имя";
+            this.label2.Text = "Имя";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(10, 338);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 13);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 31;
-            this.label5.Text = "Ваш Password";
+            this.label5.Text = "Password";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(14, 308);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 30;
-            this.label6.Text = "Ваш Login";
+            this.label6.Text = "Login";
             // 
             // Surname_admin
             // 
-            this.Surname_admin.Location = new System.Drawing.Point(93, 250);
+            this.Surname_admin.Location = new System.Drawing.Point(93, 275);
             this.Surname_admin.Name = "Surname_admin";
             this.Surname_admin.Size = new System.Drawing.Size(160, 20);
             this.Surname_admin.TabIndex = 29;
             // 
             // NameAdmin
             // 
-            this.NameAdmin.Location = new System.Drawing.Point(93, 275);
+            this.NameAdmin.Location = new System.Drawing.Point(93, 253);
             this.NameAdmin.Name = "NameAdmin";
             this.NameAdmin.Size = new System.Drawing.Size(160, 20);
             this.NameAdmin.TabIndex = 28;
@@ -145,11 +148,34 @@
             this.change.UseVisualStyleBackColor = true;
             this.change.Click += new System.EventHandler(this.change_Click);
             // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(401, 415);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.TabIndex = 35;
+            this.Delete.Text = "Удалить";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // openMySQl
+            // 
+            this.openMySQl.Location = new System.Drawing.Point(482, 415);
+            this.openMySQl.Name = "openMySQl";
+            this.openMySQl.Size = new System.Drawing.Size(94, 23);
+            this.openMySQl.TabIndex = 36;
+            this.openMySQl.Text = "Открыть SQL";
+            this.openMySQl.UseVisualStyleBackColor = true;
+            this.openMySQl.Click += new System.EventHandler(this.openMySQl_Click);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.openMySQl);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.change);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -185,5 +211,7 @@
         private System.Windows.Forms.TextBox Password_Admin;
         private System.Windows.Forms.TextBox Login_Admin;
         private System.Windows.Forms.Button change;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button openMySQl;
     }
 }
