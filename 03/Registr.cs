@@ -17,36 +17,46 @@ namespace _03
         public Registr()
         {
             InitializeComponent();
+            Save.Enabled = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Save_Click(object sender, EventArgs e)
         {
+
+            
+
+
+
             string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
-            try
-            {
-                using (var con = new MySqlConnection(cs))
+                try
                 {
-                    con.Open();
-
-                    string login = Login2.Text;
-                    string name = Name.Text;
-                    string surname = Surname.Text;
-                    string password = Password2.Text;
-
-
-
-                    var stm = String.Format("INSERT INTO users (login, name, surname, password) VALUES ('{0}', '{1}', '{2}', '{3}')",
-                                             login, name, surname, password);
-                    using (var cmd = new MySqlCommand(stm, con))
+                    using (var con = new MySqlConnection(cs))
                     {
-                        cmd.ExecuteNonQuery();
+                        con.Open();
+
+                        string login = Login2.Text;
+                        string name = Name.Text;
+                        string surname = Surname.Text;
+                        string password = Password2.Text;
+
+
+
+                        var stm = String.Format("INSERT INTO users (login, name, surname, password) VALUES ('{0}', '{1}', '{2}', '{3}')",
+                                                 login, name, surname, password);
+                        using (var cmd = new MySqlCommand(stm, con))
+                        {
+                            cmd.ExecuteNonQuery();
+                        }
+                        con.Close();
                     }
+
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
+            
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -69,6 +79,24 @@ namespace _03
                 Application.Exit();
 
            
+        }
+
+        private void Login2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Test_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(Login2.Text))
+            {
+                MessageBox.Show("Логин не может быть пустым.");
+                Save.Enabled = false;
+            }
+            else
+            {
+                Save.Enabled = true;
+            }
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
+            this.Save = new System.Windows.Forms.Button();
             this.Surname = new System.Windows.Forms.TextBox();
             this.Name = new System.Windows.Forms.TextBox();
             this.Password2 = new System.Windows.Forms.TextBox();
@@ -39,17 +39,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.openForm1 = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
+            this.Test = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button2
+            // Save
             // 
-            this.button2.Location = new System.Drawing.Point(263, 145);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Сохранить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Save.Location = new System.Drawing.Point(267, 145);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(75, 23);
+            this.Save.TabIndex = 14;
+            this.Save.Text = "Сохранить";
+            this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Surname
             // 
@@ -78,6 +79,7 @@
             this.Login2.Name = "Login2";
             this.Login2.Size = new System.Drawing.Size(160, 20);
             this.Login2.TabIndex = 10;
+            this.Login2.TextChanged += new System.EventHandler(this.Login2_TextChanged);
             // 
             // label1
             // 
@@ -135,18 +137,29 @@
             this.Exit.UseVisualStyleBackColor = true;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
+            // Test
+            // 
+            this.Test.Location = new System.Drawing.Point(267, 30);
+            this.Test.Name = "Test";
+            this.Test.Size = new System.Drawing.Size(75, 23);
+            this.Test.TabIndex = 21;
+            this.Test.Text = "Проверка";
+            this.Test.UseVisualStyleBackColor = true;
+            this.Test.Click += new System.EventHandler(this.Test_Click);
+            // 
             // Registr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Test);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.openForm1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Save);
             this.Controls.Add(this.Surname);
             this.Controls.Add(this.Name);
             this.Controls.Add(this.Password2);
@@ -159,7 +172,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Save;
         private System.Windows.Forms.TextBox Surname;
         private new System.Windows.Forms.TextBox Name;
         private System.Windows.Forms.TextBox Password2;
@@ -170,5 +183,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button openForm1;
         private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.Button Test;
     }
 }
