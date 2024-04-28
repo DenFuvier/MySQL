@@ -42,6 +42,7 @@
             this.change = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.openMySQl = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UserView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,12 +169,23 @@
             this.openMySQl.UseVisualStyleBackColor = true;
             this.openMySQl.Click += new System.EventHandler(this.openMySQl_Click);
             // 
+            // update
+            // 
+            this.update.Location = new System.Drawing.Point(582, 415);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(89, 23);
+            this.update.TabIndex = 37;
+            this.update.Text = "Обновление";
+            this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.openMySQl);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.change);
@@ -213,5 +225,6 @@
         private System.Windows.Forms.Button change;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button openMySQl;
+        private System.Windows.Forms.Button update;
     }
 }

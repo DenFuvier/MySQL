@@ -40,11 +40,12 @@
             this.openForm1 = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.Test = new System.Windows.Forms.Button();
+            this.ClearTextBox = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Save
             // 
-            this.Save.Location = new System.Drawing.Point(267, 145);
+            this.Save.Location = new System.Drawing.Point(338, 147);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(75, 23);
             this.Save.TabIndex = 14;
@@ -139,7 +140,7 @@
             // 
             // Test
             // 
-            this.Test.Location = new System.Drawing.Point(267, 30);
+            this.Test.Location = new System.Drawing.Point(257, 147);
             this.Test.Name = "Test";
             this.Test.Size = new System.Drawing.Size(75, 23);
             this.Test.TabIndex = 21;
@@ -147,11 +148,22 @@
             this.Test.UseVisualStyleBackColor = true;
             this.Test.Click += new System.EventHandler(this.Test_Click);
             // 
+            // ClearTextBox
+            // 
+            this.ClearTextBox.Location = new System.Drawing.Point(340, 30);
+            this.ClearTextBox.Name = "ClearTextBox";
+            this.ClearTextBox.Size = new System.Drawing.Size(73, 23);
+            this.ClearTextBox.TabIndex = 22;
+            this.ClearTextBox.Text = "Очистить";
+            this.ClearTextBox.UseVisualStyleBackColor = true;
+            this.ClearTextBox.Click += new System.EventHandler(this.ClearTextBox_Click);
+            // 
             // Registr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ClearTextBox);
             this.Controls.Add(this.Test);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.openForm1);
@@ -184,5 +196,6 @@
         private System.Windows.Forms.Button openForm1;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button Test;
+        private System.Windows.Forms.Button ClearTextBox;
     }
 }

@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -22,7 +23,6 @@ namespace _03
     public partial class Admin : Form
     {
         List<User> userS = new List<User>();
-
         public Admin()
         {
 
@@ -180,6 +180,45 @@ namespace _03
             }
             */
             Process.Start($"http://127.0.0.1/phpmyadmin/sql.php?db=boyk&table=users&pos=0");
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            userS.Clear(); 
+
+            string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
+
+            try
+            {
+                using (var con = new MySqlConnection(cs))
+                {
+                    con.Open();
+                    var stm = "SELECT * FROM users";
+
+                    using (var cmd = new MySqlCommand(stm, con))
+                    {
+                        using (MySqlDataReader Reader = cmd.ExecuteReader())
+                        {
+                            while (Reader.Read())
+                            {
+                                string login = Reader.GetString(0);
+                                string name = Reader.GetString(1);
+                                string surname = Reader.GetString(2);
+                                string password = Reader.GetString(3);
+                                User user = new User(login, name, surname, password);
+                                userS.Add(user);
+                            }
+                        }
+                    }
+                }
+
+                UserView.DataSource = null; 
+                UserView.DataSource = userS;
+            }
+            catch (Exception Exept)
+            {
+                MessageBox.Show(Exept.Message);
+            }
         }
     }
 }

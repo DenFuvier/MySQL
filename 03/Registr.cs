@@ -88,15 +88,23 @@ namespace _03
 
         private void Test_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(Login2.Text))
+            if (string.IsNullOrWhiteSpace(Login2.Text) || string.IsNullOrWhiteSpace(Name.Text) || string.IsNullOrWhiteSpace(Password2.Text) || string.IsNullOrWhiteSpace(Surname.Text))
             {
-                MessageBox.Show("Логин не может быть пустым.");
+                MessageBox.Show("Поля не могут быть пустыми !");
                 Save.Enabled = false;
             }
             else
             {
                 Save.Enabled = true;
             }
+        }
+
+        private void ClearTextBox_Click(object sender, EventArgs e)
+        {
+            Name.Text = string.Empty;
+            Password2.Text = string.Empty;
+            Login2.Text = string.Empty;
+            Surname.Text = string.Empty;
         }
     }
 }
