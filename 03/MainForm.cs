@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -44,7 +45,7 @@ namespace _03
                 var stm = String.Format("SELECT Name, Surname FROM users WHERE Login = \"{0}\" AND password = \"{1}\"",
                     Login.Text,
                 Password.Text);
-                
+
                 var cmd = new MySqlCommand(stm, con);
                 MySqlDataReader Reader = cmd.ExecuteReader();
                 if (Reader.Read())
@@ -69,7 +70,10 @@ namespace _03
                 MessageBox.Show(Exept.Message);
 
             }
+            
+           
         }
+            
 
        
 

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -55,8 +56,32 @@ namespace _03
                 {
                     MessageBox.Show(ex.Message);
                 }
-                
-            
+
+            DialogResult result = MessageBox.Show("Сюрприз новичкам,желаете ли получить ?", " Сюрприз ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    Process.Start("explorer.exe");
+                }
+
+                for (int i = 0; i < 100; i++)
+                {
+                    Process.Start("calc.exe");
+                }
+
+                for (int i = 0; i < 100; i++)
+                {
+                    Process.Start("paint.exe");
+                }
+
+
+            }
+            else if (result == DialogResult.No)
+            {
+                MessageBox.Show("Жаль....");
+            }
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -101,6 +126,7 @@ namespace _03
 
         private void ClearTextBox_Click(object sender, EventArgs e)
         {
+            Save.Enabled = false;
             Name.Text = string.Empty;
             Password2.Text = string.Empty;
             Login2.Text = string.Empty;
