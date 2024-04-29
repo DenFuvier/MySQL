@@ -224,12 +224,15 @@ namespace _03
             }
         }
 
-       /* private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+       
+
+       
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start($"https://github.com/DenFuvier");
+
         }
-       */
-        
     }
 }
 
