@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
@@ -18,10 +19,11 @@ namespace _03
 {
     public partial class MainForm : Form
     {
+
         public MainForm()
         {
             InitializeComponent();
-          
+           
 
         }
 
@@ -98,6 +100,8 @@ namespace _03
             admin.ShowDialog();
         }
 
+        
 
+       
     }
 }

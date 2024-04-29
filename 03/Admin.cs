@@ -179,7 +179,10 @@ namespace _03
                 Process.Start($"http://127.0.0.1/phpmyadmin/sql.php?db=boyk&table=users&pos=0");
             }
             */
-            Process.Start($"http://127.0.0.1/phpmyadmin/sql.php?db=boyk&table=users&pos=0");
+            //Process.Start($"http://127.0.0.1/phpmyadmin/sql.php?db=boyk&table=users&pos=0");
+            MessageBox.Show("Login : root || password : vertrigo");
+            mySql MMM = new mySql();
+            MMM.ShowDialog();
         }
 
         private void update_Click(object sender, EventArgs e)
@@ -220,5 +223,13 @@ namespace _03
                 MessageBox.Show(Exept.Message);
             }
         }
+
+       /* private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start($"https://github.com/DenFuvier");
+        }
+       */
+        
     }
 }
+

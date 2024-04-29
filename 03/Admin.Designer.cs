@@ -43,6 +43,7 @@
             this.Delete = new System.Windows.Forms.Button();
             this.openMySQl = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.UserView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -179,12 +180,23 @@
             this.update.UseVisualStyleBackColor = true;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(713, 425);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(75, 13);
+            this.linkLabel1.TabIndex = 38;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Создатель :D";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.update);
             this.Controls.Add(this.openMySQl);
             this.Controls.Add(this.Delete);
@@ -226,5 +238,6 @@
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button openMySQl;
         private System.Windows.Forms.Button update;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

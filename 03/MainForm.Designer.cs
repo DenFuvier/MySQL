@@ -52,7 +52,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(164, 82);
+            this.button1.Location = new System.Drawing.Point(211, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -62,7 +62,7 @@
             // 
             // OpenForm2
             // 
-            this.OpenForm2.Location = new System.Drawing.Point(245, 82);
+            this.OpenForm2.Location = new System.Drawing.Point(211, 41);
             this.OpenForm2.Name = "OpenForm2";
             this.OpenForm2.Size = new System.Drawing.Size(83, 23);
             this.OpenForm2.TabIndex = 5;
@@ -72,7 +72,7 @@
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(12, 415);
+            this.Exit.Location = new System.Drawing.Point(12, 186);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(75, 23);
             this.Exit.TabIndex = 6;
@@ -82,7 +82,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(660, 415);
+            this.button2.Location = new System.Drawing.Point(231, 186);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 23);
             this.button2.TabIndex = 7;
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(371, 221);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.OpenForm2);
