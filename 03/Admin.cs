@@ -1,22 +1,8 @@
-﻿using Google.Protobuf.WellKnownTypes;
-using MySql.Data.MySqlClient;
-using Mysqlx.Crud;
-using Mysqlx.Expr;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Text;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _03
 {
@@ -147,7 +133,7 @@ namespace _03
 
 
 
-                string stm = String.Format("DELETE FROM users WHERE login = '{0}' " , Login_Admin.Text );
+                string stm = String.Format("DELETE FROM users WHERE login = '{0}' ", Login_Admin.Text);
 
 
                 var cmd = new MySqlCommand(stm, con);
@@ -187,7 +173,7 @@ namespace _03
 
         private void update_Click(object sender, EventArgs e)
         {
-            userS.Clear(); 
+            userS.Clear();
 
             string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
 
@@ -215,7 +201,7 @@ namespace _03
                     }
                 }
 
-                UserView.DataSource = null; 
+                UserView.DataSource = null;
                 UserView.DataSource = userS;
             }
             catch (Exception Exept)
@@ -224,9 +210,9 @@ namespace _03
             }
         }
 
-       
 
-       
+
+
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {

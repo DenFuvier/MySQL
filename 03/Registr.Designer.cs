@@ -176,7 +176,7 @@
             this.Controls.Add(this.Name);
             this.Controls.Add(this.Password2);
             this.Controls.Add(this.Login2);
-            this.Text = "Form2";
+            this.Text = "Registr";
             this.ResumeLayout(false);
             this.PerformLayout();
 
