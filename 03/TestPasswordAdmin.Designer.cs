@@ -72,13 +72,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(403, 105);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Login);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.entry);
             this.Name = "TestPasswordAdmin";
-            this.Text = "TestPasswordAdmin";
+            this.Text = "PasswordAdmin";
             this.ResumeLayout(false);
             this.PerformLayout();
 
