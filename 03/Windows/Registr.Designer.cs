@@ -48,7 +48,7 @@
             this.Save.Location = new System.Drawing.Point(338, 147);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(75, 23);
-            this.Save.TabIndex = 14;
+            this.Save.TabIndex = 18;
             this.Save.Text = "Сохранить";
             this.Save.UseVisualStyleBackColor = true;
             this.Save.Click += new System.EventHandler(this.Save_Click);
@@ -72,14 +72,14 @@
             this.Password2.Location = new System.Drawing.Point(101, 121);
             this.Password2.Name = "Password2";
             this.Password2.Size = new System.Drawing.Size(160, 20);
-            this.Password2.TabIndex = 11;
+            this.Password2.TabIndex = 15;
             // 
             // Login2
             // 
             this.Login2.Location = new System.Drawing.Point(101, 95);
             this.Login2.Name = "Login2";
             this.Login2.Size = new System.Drawing.Size(160, 20);
-            this.Login2.TabIndex = 10;
+            this.Login2.TabIndex = 14;
             this.Login2.TextChanged += new System.EventHandler(this.Login2_TextChanged);
             // 
             // label1
@@ -123,7 +123,7 @@
             this.openForm1.Location = new System.Drawing.Point(101, 415);
             this.openForm1.Name = "openForm1";
             this.openForm1.Size = new System.Drawing.Size(73, 23);
-            this.openForm1.TabIndex = 19;
+            this.openForm1.TabIndex = 20;
             this.openForm1.Text = "Вернуться";
             this.openForm1.UseVisualStyleBackColor = true;
             this.openForm1.Click += new System.EventHandler(this.openForm1_Click);
@@ -133,7 +133,7 @@
             this.Exit.Location = new System.Drawing.Point(15, 415);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(75, 23);
-            this.Exit.TabIndex = 20;
+            this.Exit.TabIndex = 19;
             this.Exit.Text = "Выход";
             this.Exit.UseVisualStyleBackColor = true;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
@@ -143,7 +143,7 @@
             this.Test.Location = new System.Drawing.Point(257, 147);
             this.Test.Name = "Test";
             this.Test.Size = new System.Drawing.Size(75, 23);
-            this.Test.TabIndex = 21;
+            this.Test.TabIndex = 17;
             this.Test.Text = "Проверка";
             this.Test.UseVisualStyleBackColor = true;
             this.Test.Click += new System.EventHandler(this.Test_Click);
@@ -153,7 +153,7 @@
             this.ClearTextBox.Location = new System.Drawing.Point(340, 30);
             this.ClearTextBox.Name = "ClearTextBox";
             this.ClearTextBox.Size = new System.Drawing.Size(73, 23);
-            this.ClearTextBox.TabIndex = 22;
+            this.ClearTextBox.TabIndex = 16;
             this.ClearTextBox.Text = "Очистить";
             this.ClearTextBox.UseVisualStyleBackColor = true;
             this.ClearTextBox.Click += new System.EventHandler(this.ClearTextBox_Click);

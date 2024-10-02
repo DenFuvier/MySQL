@@ -8,6 +8,7 @@ namespace _03
 {
     public partial class Admin : Form
     {
+        ConnectSQL SQL = new ConnectSQL();
         List<User> userS = new List<User>();
         public Admin()
         {
@@ -47,7 +48,7 @@ namespace _03
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
+            string cs = SQL.GetConnect();
             try
             {
                 var con = new MySqlConnection(cs);
@@ -93,7 +94,7 @@ namespace _03
 
         private void change_Click(object sender, EventArgs e)
         {
-            string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
+            string cs = SQL.GetConnect();
             try
             {
                 var con = new MySqlConnection(cs);
@@ -125,7 +126,7 @@ namespace _03
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
+            string cs = SQL.GetConnect();
             try
             {
                 var con = new MySqlConnection(cs);
@@ -173,9 +174,10 @@ namespace _03
 
         private void update_Click(object sender, EventArgs e)
         {
+            ConnectSQL SQL = new ConnectSQL();
             userS.Clear();
 
-            string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
+            string cs = SQL.GetConnect();
 
             try
             {

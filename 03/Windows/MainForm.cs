@@ -10,6 +10,7 @@ namespace _03
 {
     public partial class MainForm : Form
     {
+        ConnectSQL SQL = new ConnectSQL();
 
         public MainForm()
         {
@@ -27,7 +28,7 @@ namespace _03
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
+            string cs = SQL.GetConnect();
             try
             {
 

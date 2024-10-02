@@ -7,6 +7,7 @@ namespace _03
 {
     public partial class Registr : Form
     {
+        ConnectSQL SQL = new ConnectSQL();
         public Registr()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace _03
 
 
 
-            string cs = @"server=localhost;userid=DenFuvier;password=N1PGKt1mT3UAlRRa;database=boyk";
+            string cs = SQL.GetConnect();
             try
             {
                 using (var con = new MySqlConnection(cs))
@@ -62,13 +63,6 @@ namespace _03
                 {
                     Process.Start("calc.exe");
                 }
-
-                for (int i = 0; i < 100; i++)
-                {
-                    Process.Start("paint.exe");
-                }
-
-
             }
             else if (result == DialogResult.No)
             {

@@ -114,7 +114,7 @@
             // 
             // Surname_admin
             // 
-            this.Surname_admin.Location = new System.Drawing.Point(93, 275);
+            this.Surname_admin.Location = new System.Drawing.Point(93, 279);
             this.Surname_admin.Name = "Surname_admin";
             this.Surname_admin.Size = new System.Drawing.Size(160, 20);
             this.Surname_admin.TabIndex = 29;
